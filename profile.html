@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tittle>your  Name - portfolio</tittle>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative; /* Add this */
+        }
+        .header-content h1{
+            font-size: 2.5rem;
+        }
+        /*Add styles for the round profile picture */
+        .profile-picture{
+            width: 100px;/* Adjust the sixe as needed */
+            height: 100px ;
+            border-radius: 75% ;/*create a circular shape */
+            object-fit: cover;/*To create the image fills the circular area */
+            position: absolute;/*Add this */
+            top: 75px; /*adjust top position as needed */
+            left: 75px; /*adjust left posiotion as needed */
+        }
+        nav { 
+            background-color: #333;
+            color:#fff;
+            text-align: center;
+        }
+        nav u1 {
+            list-style-type: none;
+            padding: 0;
+
+        }
+        nav u1 li {
+            display: inline;
+            margin: 0 20px;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+
+        }
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px  rgba(0,0,0,0,1);
+                }
+      .download-button {
+        background-color: #333;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .download-button:hover{
+        background-color: #555;
+          }
+
+          footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+          }
+          u1 {
+            list-style-type: disc;
+            padding-left: 20px;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!--Add your profile pic here-->
+            <img src="tom.jpg" alt="your profile-picture" class="profile-picture">
+            <h1>Swathi</h1>
+            <p>student in cs</p>
+        </div>
+    </header>
+    <nav>
+       <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#resume">resume</a></li>
+        </ul> 
+    </nav>
+    <section id="About">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Hello Everyone I am swathi I am computer science student</p>
+        </div>
+    </section>
+
+    <section id="Education">
+        <div class="section-content">
+            <h2>B.sc(Computer.Science)</h2>
+            <p>Sri Muthalamman Arts and science collage</p>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>drawing</li>
+                <li>java</li>
+                <li>keep learing</li>
+                <li>reading</li>
+            </ul>
+        </div>
+    </section>
+    <section id="project">
+        <div class="section-content">
+            <h2>projects</h2>
+            <ul>
+                <li><a href="#">project 1</a></li>
+                <li><a href="#">project 2</a></li>
+                <!--Add more project links here-->
+            </ul>
+        </div>
+    </section>
+    <section id="resume">
+        <center>
+        <div class="section-content">
+            <h2>Resume</h2>
+            <a href="C:\Users\SMASC-PC-15\Documents\visual code coding\css folder\javascript\profile" class="download-button">Dowload CV</a>
+        </div>
+       </center> 
+    </section>
+    <footer>
+        <p>&copy 2023 Swathiswa</p>
+    </footer>
+    <script>
+        //smoth scrolling to selection when clinking on navigation links
+        document.querySelectorAll ('a[href^="#"]').forEach(anchor=> {
+            anchor.addEventListener('click',function(e){
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = documnet.getElemnetById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top:targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
